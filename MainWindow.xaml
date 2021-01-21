@@ -1,0 +1,35 @@
+﻿<Window x:Class="BramkiLogiczne.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BramkiLogiczne"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="479" Width="891">
+    <Grid>
+        <CheckBox x:Name="AndBut1" Content="Wejscie 1" IsChecked="False" HorizontalAlignment="Left" Margin="39,104,0,0" VerticalAlignment="Top" Height="15" Width="90" Checked="AndBut1_Checked" Unchecked="AndBut1_Checked"/>
+        <RadioButton Focusable="False" IsHitTestVisible="False" x:Name="AndWynik" Content="Wynik" GroupName="1" HorizontalAlignment="Left" Margin="316,103,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.949,0.484"/>
+        <CheckBox x:Name="AndBut2" Content="Wejscie 2" IsChecked="False" HorizontalAlignment="Left" Margin="138,104,0,0" VerticalAlignment="Top" Height="14" Width="90" Checked="AndBut1_Checked" Unchecked="AndBut1_Checked"/>
+        <CheckBox x:Name="OrBut1" Content="Wejscie 1" IsChecked="False" HorizontalAlignment="Left" Margin="39,228,0,0" VerticalAlignment="Top" Height="22" Width="90" Checked="OrBut1_Checked" Unchecked="OrBut1_Checked"/>
+        <CheckBox x:Name="OrBut2" Content="Wejscie 2" IsChecked="False" HorizontalAlignment="Left" Margin="138,228,0,0" VerticalAlignment="Top" Height="19" Width="90" Checked="OrBut1_Checked" Unchecked="OrBut1_Checked"/>
+        <RadioButton Focusable="False" IsHitTestVisible="False" x:Name="OrWynik" Content="Wynik" GroupName="2" HorizontalAlignment="Left" Margin="316,230,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.949,0.484" Height="22"/>
+        <CheckBox x:Name="NotBut1" Content="Wejscie" IsChecked="False" HorizontalAlignment="Left" Margin="39,366,0,0" VerticalAlignment="Top" Height="15" Width="90" Checked="NotBut1_Checked"  Unchecked="NotBut1_Checked" />
+        <RadioButton x:Name="NotWynik" Content="Wynik" IsChecked="True" GroupName="3" HorizontalAlignment="Left" Margin="316,366,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.949,0.484"/>
+        <CheckBox x:Name="XorBut1" Content="Wejscie 1" IsChecked="False" HorizontalAlignment="Left" Margin="450,104,0,0" VerticalAlignment="Top" Height="15" Width="90" Checked="XorBut1_Checked" Unchecked="XorBut1_Checked" />
+        <CheckBox x:Name="XorBut2" Content="Wejscie 2" IsChecked="False" HorizontalAlignment="Left" Margin="550,104,0,0" VerticalAlignment="Top" Height="14" Width="90" Checked="XorBut1_Checked" Unchecked="XorBut1_Checked" />
+        <RadioButton Focusable="False" IsHitTestVisible="False" x:Name="XorWynik" Content="Wynik" GroupName="4" HorizontalAlignment="Left" Margin="728,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.949,0.484"/>
+        <CheckBox x:Name="NandBut1" Content="Wejscie 1" IsChecked="False" HorizontalAlignment="Left" Margin="450,228,0,0" VerticalAlignment="Top" Height="15" Width="90" Checked="NandBut1_Checked" Unchecked="NandBut1_Checked" />
+        <CheckBox x:Name="NandBut2" Content="Wejscie 2" IsChecked="False" HorizontalAlignment="Left" Margin="550,229,0,0" VerticalAlignment="Top" Height="14" Width="90" Checked="NandBut1_Checked" Unchecked="NandBut1_Checked" />
+        <RadioButton Focusable="False" IsHitTestVisible="False" x:Name="NandWynik" Content="Wynik" IsChecked="True" GroupName="5" HorizontalAlignment="Left" Margin="728,230,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.949,0.484"/>
+        <CheckBox x:Name="NorBut1" Content="Wejscie 1" IsChecked="False" HorizontalAlignment="Left" Margin="450,366,0,0" VerticalAlignment="Top" Height="15" Width="90" Checked="NorBut1_Checked" Unchecked="NorBut1_Checked" />
+        <CheckBox x:Name="NorBut2" Content="Wejscie 2" IsChecked="False" HorizontalAlignment="Left" Margin="550,367,0,0" VerticalAlignment="Top" Height="14" Width="90" Checked="NorBut1_Checked" Unchecked="NorBut1_Checked" />
+        <RadioButton Focusable="False" IsHitTestVisible="False" x:Name="NorWynik" Content="Wynik" IsChecked="True" GroupName="6" HorizontalAlignment="Left" Margin="728,366,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.949,0.484"/>
+        <TextBox IsReadOnly="True" HorizontalAlignment="Left" Height="88" Margin="39,132,0,0" Text="Bramka Or - Na wyjściu bramki OR wynik o wartości 1 pojawi się zawsze w sytuacji, jeżeli chociaż jedno z wejść przyjmuje stan wysoki. Oznacza to również, że jeżeli pojawi się więcej niż jedno wejście o stanie wysokim – na wyjściu również pojawi się jedynka." TextWrapping="Wrap" VerticalAlignment="Top" Width="329"  />
+        <TextBox IsReadOnly="True" HorizontalAlignment="Left" Height="104" Margin="39,257,0,0" Text="Bramka Not - Jej działanie polega na negacji (odwróceniu) sygnału, który otrzyma na wejściu. W praktyce wygląda to następująco: jeżeli na wejściu zostanie nadany sygnał o wartości 1 (prawda), to na wyjściu pojawi się sygnał o wartości 0 (fałsz). Natomiast jeżeli na wejściu pojawi się sygnał 0, na wyjściu pojawi się 1." TextWrapping="Wrap" VerticalAlignment="Top" Width="329"/>
+        <TextBox IsReadOnly="True" HorizontalAlignment="Left" Height="65" Margin="450,33,0,0" Text="Bramka XOR Uzyskuje wysoki stan zawsze, jeżeli tylko jeden ze stanów wejściowych jest równy logicznej jedynce. Stan niski na wyjściu pojawi się w sytuacji, jeżeli obie wartości na wejściu będą jednakowe." TextWrapping="Wrap" VerticalAlignment="Top" Width="330" />
+        <TextBox IsReadOnly="True" HorizontalAlignment="Left" Height="65" Margin="39,33,0,0" Text="Bramka And - Przy działaniu bramki logicznej AND wynik 1 można otrzymać tylko w przypadku, kiedy oba wejścia będą równały się jedynce.&#xD;&#xA;" TextWrapping="Wrap" VerticalAlignment="Top" Width="329"/>
+        <TextBox IsReadOnly="True" HorizontalAlignment="Left" Height="88" Margin="450,132,0,0" Text="Bramka NAND -  stan niski (0) pojawia się jedynie wtedy, jeżeli na wszystkich wejściach pojawi się stan wysoki (1)" TextWrapping="Wrap" VerticalAlignment="Top" Width="330"/>
+        <TextBox IsReadOnly="True" HorizontalAlignment="Left" Height="104" Margin="450,257,0,0" Text="Bramka NOR -  NOR na wyjściu zawsze zwróci stan niski, z wyjątkiem sytuacji, w której wszystkie stany będą ustawione na wartość 0. Takie bramki mogą mieć nieskończoną ilość wejść." TextWrapping="Wrap" VerticalAlignment="Top" Width="330"/>
+
+    </Grid>
+</Window>
